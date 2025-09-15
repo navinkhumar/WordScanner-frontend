@@ -9,6 +9,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [dragOver, setDragOver] = useState(false);
 
+  // Backend URL
+  const BACKEND_URL = "https://wordscanner-backend.onrender.com";
+
   // Handle image selection
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -47,7 +50,7 @@ function App() {
     formData.append("image", image);
 
     try {
-      const res = await axios.post("http://localhost:5000/ocr", formData);
+      const res = await axios.post(`${BACKEND_URL}/ocr`, formData);
       setOcrText(res.data.text);
     } catch (err) {
       console.error(err);
