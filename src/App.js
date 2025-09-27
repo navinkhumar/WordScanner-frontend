@@ -10,7 +10,7 @@ function App() {
   const [dragOver, setDragOver] = useState(false);
 
   // Backend URL
-  const BACKEND_URL = " https://wordscanner-backend.onrender.com";
+  const BACKEND_URL = "https://wordscanner-backend-4zhs.onrender.com";
 
   // Handle image selection
   const handleFileChange = (e) => {
